@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate</title>
+  </head>
+  <body>
+    <h1>Circle Area Calculator</h1>
+    <label for="radiusInput">Enter the radius of the circle:</label>
+    <input type="text" id="radiusInput" placeholder="Enter radius" />
+    <button onclick="calculateArea()">Calculate</button>
+    <p id="result"></p>
+    <script>
+      function calculateArea() {
+        
+        var radius = parseFloat(document.getElementById("radiusInput").value);
+
+        var area = Math.PI * Math.pow(radius, 2);
+
+      
+        area = area.toFixed(2);
+
+      
+        document.getElementById("result").innerHTML =
+          "The area of the circle is: " + area;
+      }
+    </script>
+  </body>
+</html>
